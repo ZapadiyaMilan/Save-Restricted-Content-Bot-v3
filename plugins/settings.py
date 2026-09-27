@@ -16,7 +16,7 @@ VIDEO_EXTENSIONS = {
     'mp4', 'mkv', 'avi', 'mov', 'wmv', 'flv', 'webm',
     'mpeg', 'mpg', '3gp'
 }
-SET_PIC = 'https://myimgs.org/storage/images/47146/1000550108.jpg'
+SET_PIC = ''
 MESS = 'Customize settings for your files...'
 
 active_conversations = {}
