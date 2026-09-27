@@ -16,7 +16,7 @@ VIDEO_EXTENSIONS = {
     'mp4', 'mkv', 'avi', 'mov', 'wmv', 'flv', 'webm',
     'mpeg', 'mpg', '3gp'
 }
-SET_PIC = ''
+SET_PIC = 'https://myimgs.org/storage/images/47260/1000550108.jpg'
 MESS = 'Customize settings for your files...'
 
 active_conversations = {}
@@ -49,7 +49,7 @@ async def send_settings_message(chat_id, user_id):
             Button.inline('❌ Remove Thumbnail', b'remthumb')
         ],
         [
-            Button.url('🦁 Report Errors', '@Zapadiya_milan_003')
+            Button.url('🦁 Report Errors', 'https://t.me/Zapadiya_milan_003')
         ]
     ]
     await gf.send_message(chat_id, MESS, buttons=buttons)
