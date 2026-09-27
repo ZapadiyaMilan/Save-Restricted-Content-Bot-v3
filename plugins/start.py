@@ -231,5 +231,30 @@ async def see_terms(client, callback_query):
         ]
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
- 
+    @app.on_message(filters.command("start") & filters.private)
+async def start(client, message):
+    join = await subscribe(client, message)
+    if join == 1:
+        return
+        
+    caption = (
+        "Hi 👋 Welcome, Wanna intro...?\n\n"
+        "❇️ I can save posts from channels or groups where forwarding is off. I can download videos/audio from YT, INSTA, ... social platforms\n"
+        "❇️ Simply send the post link of a public channel. For private channels, do 🔓 /login.\n"
+        "Send /help to know more."
+    )
+    
+    buttons = InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("Join Channel", url="https://t.me/team_shellby_limited")],
+            [InlineKeyboardButton("Get Premium", callback_data="see_plan")]
+        ]
+    )
+    
+    await message.reply_photo(
+        photo="https://myimgs.org/storage/images/47358/1000550108.jpg",
+        caption=caption,
+        reply_markup=buttons
+    )
+
  
