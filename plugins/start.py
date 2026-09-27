@@ -238,7 +238,7 @@ async def start(client, message):
         return
         
     caption = (
-        "Hi 👋 Welcome, Wanna intro...?\n\n"
+        "Hi 👋 Welcome, SHELLBY🦁...?\n\n"
         "❇️ I can save posts from channels or groups where forwarding is off. I can download videos/audio from YT, INSTA, ... social platforms\n"
         "❇️ Simply send the post link of a public channel. For private channels, do 🔓 /login.\n"
         "Send /help to know more."
