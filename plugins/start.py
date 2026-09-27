@@ -231,7 +231,7 @@ async def see_terms(client, callback_query):
         ]
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
-    @app.on_message(filters.command("start") & filters.private)
+@app.on_message(filters.command("start") & filters.private)
 async def start(client, message):
     join = await subscribe(client, message)
     if join == 1:
