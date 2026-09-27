@@ -43,12 +43,12 @@
     },
     "FORCE_SUB": {
       "description": "Channel ID (with -100 prefix) for forced subscription",
-      "value": "-10012345567",
+      "value": "1004486283937",
       "required": true
     },
     "LOG_GROUP": {
       "description": "Log channel/group ID (with -100 prefix) where the bot will send logs",
-      "value": "-1001234456",
+      "value": "-1004486283937",
       "required": true
     },
     "MASTER_KEY": {
