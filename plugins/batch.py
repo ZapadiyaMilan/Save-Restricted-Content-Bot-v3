@@ -406,10 +406,10 @@ async def process_cmd(c, m):
         await pro.edit('You have an active task. Use /stop to cancel it.')
         return
     
-    ubot = await get_ubot(uid)
-    if not ubot:
-        await pro.edit('Add your bot with /setbot first')
-        return
+    #ubot = await get_ubot(uid)
+    #if not ubot:
+        #await pro.edit('Add your bot with /setbot first')
+        #return
     
     Z[uid] = {'step': 'start' if cmd == 'batch' else 'start_single'}
     await pro.edit(f'Send {"start link..." if cmd == "batch" else "link you to process"}.')
