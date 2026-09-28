@@ -196,8 +196,8 @@ async def plan(client, message):
         "🏆 **Fortnightly Pro Plan**: ₹200 (15 Days)\n"
         "🏆 **Monthly Pro Plan**: ₹250 (30 Days)\n"
         "🏆 **Yearly Pro Plan**: ₹1500 (365 Days)\n\n"
-        "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
-        "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
+        "🛑 **PAYMENT METHOD ✅ **\n"
+        "   UPI ACCESS... Let's Owner Contact☠️\n\n"
         "📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms.\n"
     )
      
@@ -228,8 +228,8 @@ async def see_plan(client, callback_query):
         "🏆 **Fortnightly Pro Plan**: ₹200 (15 Days)\n"
         "🏆 **Monthly Pro Plan**: ₹250 (30 Days)\n"
         "🏆 **Yearly Pro Plan**: ₹1500 (365 Days)\n\n"
-        "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
-        "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
+        "🛑 **PAYMENT METHOD ✅ **\n"
+        "   UPI ACCESS... Let's Owner Contact☠️\n\n"
         "📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms or click See Terms👇\n"
     )
      
