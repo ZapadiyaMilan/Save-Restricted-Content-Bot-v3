@@ -416,8 +416,8 @@ async def process_cmd(c, m):
     await pro.edit(
     "🎯 Send The Link For Where I Need To Start Process From.\n"
     " Private & Public Groups..\n\n"
-    "Example - https://t.me/c/xxxxxxx/xxxxx/xxxx\n\n"
-    "You Have Only 3 Tries"
+    "> Example - https://t.me/c/xxxxxxx/xxxxx/xxxx\n\n"
+    "> You Have Only 3 Tries"
     )
     
 @X.on_message(filters.command(['cancel', 'stop']))
