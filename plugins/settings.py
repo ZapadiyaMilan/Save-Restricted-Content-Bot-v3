@@ -52,8 +52,9 @@ async def send_settings_message(chat_id, user_id):
             Button.url('🦁 Report Errors', 'https://t.me/Zapadiya_milan_003')
         ]
     ]
-    await gf.send_message(chat_id, MESS, buttons=buttons)
-
+    #await gf.send_message(chat_id, MESS, buttons=buttons)
+    await gf.send_file(chat_id, SET_PIC, caption=MESS, buttons=buttons)
+    
 @gf.on(events.CallbackQuery)
 async def callback_query_handler(event):
     user_id = event.sender_id
