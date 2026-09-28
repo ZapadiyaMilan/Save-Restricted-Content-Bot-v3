@@ -406,10 +406,10 @@ async def process_cmd(c, m):
         await pro.edit('You have an active task. Use /stop to cancel it.')
         return
     
-    #ubot = await get_ubot(uid)
-    #if not ubot:
-        #await pro.edit('Add your bot with /setbot first')
-        #return
+    ubot = await get_ubot(uid)
+    if not ubot:
+        await pro.edit('Add your bot with /setbot first')
+        return
     
     Z[uid] = {'step': 'start' if cmd == 'batch' else 'start_single'}
     await pro.edit(f'Send {"start link..." if cmd == "batch" else "link you to process"}.')
@@ -432,10 +432,10 @@ async def text_handler(c, m):
     uid = m.from_user.id
     if uid not in Z: return
     s = Z[uid].get('step')
-    #x = await get_ubot(uid)
-    #if not x:
-        #await message.reply("Add your bot /setbot `token`")
-        #return
+    x = await get_ubot(uid)
+    if not x:
+        await message.reply("Add your bot /setbot `token`")
+        return
 
     if s == 'start':
         L = m.text
@@ -459,11 +459,11 @@ async def text_handler(c, m):
         i, s, lt = Z[uid]['cid'], Z[uid]['sid'], Z[uid]['lt']
         pt = await m.reply_text('Processing...')
         
-        #ubot = UB.get(uid)
-        #if not ubot:
-            #await pt.edit('Add bot with /setbot first')
-            #Z.pop(uid, None)
-            #return
+        ubot = UB.get(uid)
+        if not ubot:
+            await pt.edit('Add bot with /setbot first')
+            Z.pop(uid, None)
+            return
         
         uc = await get_uclient(uid)
         if not uc:
