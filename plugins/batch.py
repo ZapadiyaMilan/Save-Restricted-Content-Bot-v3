@@ -445,9 +445,7 @@ async def text_handler(c, m):
             Z.pop(uid, None)
             return
         Z[uid].update({'step': 'count', 'cid': i, 'sid': d, 'lt': lt})
-        await m.reply_text('🌀 How many messages do you want to process?'/n/n>
-Max limit 500')
-
+        await m.reply_text('🌀 How many messages do you want to process?\n\n> Max limit 500 \n')
     elif s == 'start_single':
         L = m.text
         i, d, lt = E(L)
