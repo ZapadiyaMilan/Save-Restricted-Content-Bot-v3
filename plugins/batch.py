@@ -459,11 +459,11 @@ async def text_handler(c, m):
         i, s, lt = Z[uid]['cid'], Z[uid]['sid'], Z[uid]['lt']
         pt = await m.reply_text('Processing...')
         
-        ubot = UB.get(uid)
-        if not ubot:
-            await pt.edit('Add bot with /setbot first')
-            Z.pop(uid, None)
-            return
+        #ubot = UB.get(uid)
+        #if not ubot:
+            #await pt.edit('Add bot with /setbot first')
+            #Z.pop(uid, None)
+            #return
         
         uc = await get_uclient(uid)
         if not uc:
