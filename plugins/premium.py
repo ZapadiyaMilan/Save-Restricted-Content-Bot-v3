@@ -32,7 +32,7 @@ async def add_premium_handler(event):
     if len(parts) != 4:
         await event.respond(
             """Invalid format. Use: /add user_id duration_value duration_unit
-Example: /add 123456 1 week"""
+Example: /add 123456 Min, Hours, Days, weeks, month, year"""
             )
         return
     try:
