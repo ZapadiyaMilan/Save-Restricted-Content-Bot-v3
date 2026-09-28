@@ -212,7 +212,7 @@ async def prog(c, t, C, h, m, st):
         bar = '♦️' * int(p / 10) + '◇' * (10 - int(p / 10))
         speed = c / (time.time() - st) / (1024 * 1024) if time.time() > st else 0
         eta = time.strftime('%M:%S', time.gmtime((t - c) / (speed * 1024 * 1024))) if speed > 0 else '00:00'
-        await C.edit_message_text(h, m, f"__**Pyro Handler...**__\n\n{bar}\n\n⚡**__Completed__**: {c_mb:.2f} MB / {t_mb:.2f} MB\n📊 **__Done__**: {p:.2f}%\n🚀 **__Speed__**: {speed:.2f} MB/s\n⏳ **__ETA__**: {eta}\n\n**__Powered by Team SPY__**")
+        await C.edit_message_text(h, m, f"__**Pyro Handler...**__\n\n{bar}\n\n⚡**__Completed__**: {c_mb:.2f} MB / {t_mb:.2f} MB\n📊 **__Done__**: {p:.2f}%\n🚀 **__Speed__**: {speed:.2f} MB/s\n⏳ **__ETA__**: {eta}\n\n**__Powered by Team SHELLBY♕︎__**")
         if p >= 100: P.pop(m, None)
 
 async def send_direct(c, m, tcid, ft=None, rtmid=None):
@@ -445,7 +445,8 @@ async def text_handler(c, m):
             Z.pop(uid, None)
             return
         Z[uid].update({'step': 'count', 'cid': i, 'sid': d, 'lt': lt})
-        await m.reply_text('How many messages?')
+        await m.reply_text('🌀 How many messages do you want to process?'/n/n>
+Max limit 500')
 
     elif s == 'start_single':
         L = m.text
@@ -552,7 +553,7 @@ async def text_handler(c, m):
                 await asyncio.sleep(10)
             
             if j+1 == n:
-                await m.reply_text(f'𝗕𝗔𝗧𝗖𝗛 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗦𝗛𝗘𝗟𝗟𝗕𝗬☠︎︎: {success}/{n}')
+                await m.reply_text(f'Batch Complete SHELLBYシ︎: {success}/{n}')
         
         finally:
             await remove_active_batch(uid)
