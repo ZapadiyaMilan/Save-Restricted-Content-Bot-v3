@@ -412,8 +412,14 @@ async def process_cmd(c, m):
         return
     
     Z[uid] = {'step': 'start' if cmd == 'batch' else 'start_single'}
-    await pro.edit(f'Send {"start link..." if cmd == "batch" else "link you to process"}.')
-
+    #await pro.edit(f'Send {"start link..." if cmd == "batch" else "link you to process"}.')
+    await pro.edit(
+    "🎯 Send The Link For Where I Need To Start Process From.\n"
+    " Private & Public Groups..\n\n"
+    "Example - https://t.me/c/xxxxxxx/xxxxx/xxxx\n\n"
+    "You Have Only 3 Tries"
+    )
+    
 @X.on_message(filters.command(['cancel', 'stop']))
 async def cancel_cmd(c, m):
     uid = m.from_user.id
@@ -551,7 +557,7 @@ async def text_handler(c, m):
                 await asyncio.sleep(10)
             
             if j+1 == n:
-                await m.reply_text(f'Batch Complete SHELLBYシ︎: {success}/{n}')
+                await m.reply_text(f'Batch Complete 𝗦𝗛𝗘𝗟𝗟𝗕𝗬♕︎ ✅: {success}/{n}')
         
         finally:
             await remove_active_batch(uid)
