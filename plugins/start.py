@@ -252,7 +252,7 @@ async def start(client, message):
     )
     
     await message.reply_photo(
-        photo="https://myimgs.org/storage/images/47358/1000550108.jpg",
+        photo="https://myimgs.org/storage/images/47889/1000571657.jpg",
         caption=caption,
         reply_markup=buttons
     )
