@@ -103,33 +103,3 @@ async def start_handler(client, message):
         caption=b6,
         reply_markup=kb
     )
-    @bot_client.on(events.NewMessage(pattern='/myplan'))
-async def my_plan_handler(event):
-    if not await is_private_chat(event):
-        await event.respond('This command can only be used in private chats.')
-        return
-        
-    user_id = event.sender_id
-    try:
-        from utils.func import db
-        user_data = await db.users.find_one({"user_id": user_id})
-        
-        if user_data and user_data.get("expiry_date"):
-            expiry_utc = user_data.get("expiry_date")
-            expiry_ist = expiry_utc + timedelta(hours=5, minutes=30)
-            formatted_expiry = expiry_ist.strftime('%d-%b-%Y %I:%M:%S %p')
-            
-            await event.respond(
-                f"✨ **Your Subscription Details** ✨\n\n"
-                f"✅ **Status**: Active Premium Member\n"
-                f"⏳ **Valid Upto**: {formatted_expiry} (IST)"
-            )
-        else:
-            await event.respond(
-                "❌ **You do not have an active premium plan.**\n\n"
-                "Please contact the admin to buy a subscription."
-            )
-    except Exception as e:
-        await event.respond(f"An error occurred: {str(e)}")
-
-         
