@@ -552,7 +552,7 @@ async def text_handler(c, m):
                 await asyncio.sleep(10)
             
             if j+1 == n:
-                await m.reply_text(f'Batch Completed ✅ Success: {success}/{n}')
+                await m.reply_text(f'𝗕𝗔𝗧𝗖𝗛 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗦𝗛𝗘𝗟𝗟𝗕𝗬☠︎︎: {success}/{n}')
         
         finally:
             await remove_active_batch(uid)
