@@ -384,11 +384,11 @@ async def process_msg(c, u, m, d, lt, uid, i):
                 await c.edit_message_text(d, p.id, f'Upload failed: {str(e)[:30]}')
                 if os.path.exists(f): os.remove(f)
                 return 'Failed.'
-                    try:
-                        if LOG_GROUP:
-                            await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=p.id, caption=f"📥 **Downloaded File**\n👤 User ID: `{uid}`")
-                    except Exception as e:
-                        print(f"Log error: {e}")
+                try:
+                    if LOG_GROUP:
+                        await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=p.id, caption=f"📥 **Downloaded File**\n👤 User ID: `{uid}`")
+                except Exception as e:
+                    print(f"Log error: {e}")
 
             os.remove(f)
             await c.delete_messages(d, p.id)
