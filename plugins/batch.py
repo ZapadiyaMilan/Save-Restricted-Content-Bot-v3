@@ -331,10 +331,10 @@ async def process_msg(c, u, m, d, lt, uid, i):
                 
                 await c.copy_message(d, LOG_GROUP, sent.id)
                 try:
-        if LOG_GROUP:
-            await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=sent.id, caption="⚠️ **Logged File**")
-    except Exception as e:
-        print(f"Log Error: {e}")
+                    if LOG_GROUP:
+                        await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=sent.id, caption="⚠️ **Logged File**")
+                except Exception as e:
+                    print(f"Log Error: {e}")
 
                 os.remove(f)
                 await c.delete_messages(d, p.id)
@@ -385,10 +385,10 @@ async def process_msg(c, u, m, d, lt, uid, i):
                 if os.path.exists(f): os.remove(f)
                 return 'Failed.'
                     try:
-                if LOG_GROUP:
-                    await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=p.id, caption=f"📥 **Downloaded File**\n👤 User ID: `{uid}`")
-            except Exception as e:
-                print(f"Log error: {e}")
+                        if LOG_GROUP:
+                            await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=p.id, caption=f"📥 **Downloaded File**\n👤 User ID: `{uid}`")
+                    except Exception as e:
+                        print(f"Log error: {e}")
 
             os.remove(f)
             await c.delete_messages(d, p.id)
