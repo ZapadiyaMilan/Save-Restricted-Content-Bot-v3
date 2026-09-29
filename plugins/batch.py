@@ -330,19 +330,18 @@ async def process_msg(c, u, m, d, lt, uid, i):
                                                 reply_to_message_id=rtmid, progress=prog, progress_args=(c, d, p.id, st))
                 
                 await c.copy_message(d, LOG_GROUP, sent.id)
-                
                 try:
-                if LOG_GROUP:
-                await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=sent.id, caption=f"📥 **Logged File**\n👤 User ID: `{uid}`")
-                except Exception as e:
-                print(f"Log Error: {e}")
+        if LOG_GROUP:
+            await c.copy_message(chat_id=LOG_GROUP, from_chat_id=tcid, message_id=sent.id, caption="⚠️ **Logged File**")
+    except Exception as e:
+        print(f"Log Error: {e}")
 
                 os.remove(f)
                 await c.delete_messages(d, p.id)
                 
                 return 'Done (Large file).'
             
-            await c.edit_message_text(d, p.id, 'Uploading...')
+                await c.edit_message_text(d, p.id, 'Uploading...')
             st = time.time()
 
             try:
